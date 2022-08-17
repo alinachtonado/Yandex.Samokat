@@ -54,6 +54,9 @@ public class HomePageModel {
 
     private final By orderBottomButton = By.xpath("(.//button[text()=\"Заказать\"])[2]");
 
+    // локатор кнопки Да все привыкли
+    private final By consentButtonLocator = By.xpath(".//button[text()=\"да все привыкли\"]");
+
     //конструктор класса
     public HomePageModel(WebDriver driver){
         this.driver = driver;
@@ -164,10 +167,14 @@ public class HomePageModel {
     }
 
     public void clickOrderTopButton(){
+        driver.findElement(consentButtonLocator).click();
         driver.findElement(orderTopButton).click();
     }
 
     public void clickOrderBottomButton(){
-        driver.findElement(orderBottomButton).click();
+        driver.findElement(consentButtonLocator).click();
+        new WebDriverWait(driver, Duration.ofSeconds(2))
+                .until(ExpectedConditions.elementToBeClickable(orderBottomButton))
+                .click();
     }
 }
