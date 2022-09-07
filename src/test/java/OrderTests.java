@@ -19,7 +19,7 @@ public class OrderTests {
     @Test
     public void topButtonOrderTest(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickOrderTopButton();
+        homePageModel.clickOrderButton(false);
 
         OrderPageModel orderPageModel = new OrderPageModel(driver);
         orderPageModel.setFirstForm("Порфирий", "Петрович", "Москва 1", "Чертан", "+9991234567");
@@ -36,7 +36,7 @@ public class OrderTests {
     @Test
     public void bottomButtonOrderTest(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickOrderBottomButton();
+        homePageModel.clickOrderButton(true);
 
         OrderPageModel orderPageModel = new OrderPageModel(driver);
         orderPageModel.setFirstForm("Имя", "Фамилия", "Москва 2", "Черкиз", "+1231255516");

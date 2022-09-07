@@ -37,15 +37,14 @@ public class HomePageModel {
                 .until(ExpectedConditions.visibilityOfElementLocated(answerLocator));
     }
 
-    public void clickOrderTopButton(){
+    public void clickOrderButton(boolean bottomButton){
         driver.findElement(consentButtonLocator).click();
-        driver.findElement(orderTopButton).click();
-    }
-
-    public void clickOrderBottomButton(){
-        driver.findElement(consentButtonLocator).click();
-        new WebDriverWait(driver, Duration.ofSeconds(2))
-                .until(ExpectedConditions.elementToBeClickable(orderBottomButton))
-                .click();
+        if (bottomButton){
+            new WebDriverWait(driver, Duration.ofSeconds(2))
+                    .until(ExpectedConditions.elementToBeClickable(orderBottomButton))
+                    .click();
+        }else{
+            driver.findElement(orderTopButton).click();
+        }
     }
 }
