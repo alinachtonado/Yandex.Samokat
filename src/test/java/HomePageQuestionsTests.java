@@ -19,57 +19,57 @@ public class HomePageQuestionsTests {
     @Test
     public void question1Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion1();
-        homePageModel.waitForAnswer1Shown();
+        homePageModel.clickQuestion(0);
+        homePageModel.waitForAnswerShown(0);
     }
 
     @Test
     public void question2Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion2();
-        homePageModel.waitForAnswer2Shown();
+        homePageModel.clickQuestion(1);
+        homePageModel.waitForAnswerShown(1);
     }
 
     @Test
     public void question3Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion3();
-        homePageModel.waitForAnswer3Shown();
+        homePageModel.clickQuestion(2);
+        homePageModel.waitForAnswerShown(2);
     }
 
     @Test
     public void question4Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion4();
-        homePageModel.waitForAnswer4Shown();
+        homePageModel.clickQuestion(3);
+        homePageModel.waitForAnswerShown(3);
     }
 
     @Test
     public void question5Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion5();
-        homePageModel.waitForAnswer5Shown();
+        homePageModel.clickQuestion(4);
+        homePageModel.waitForAnswerShown(4);
     }
 
     @Test
     public void question6Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion6();
-        homePageModel.waitForAnswer6Shown();
+        homePageModel.clickQuestion(5);
+        homePageModel.waitForAnswerShown(5);
     }
 
     @Test
     public void question7Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion7();
-        homePageModel.waitForAnswer7Shown();
+        homePageModel.clickQuestion(6);
+        homePageModel.waitForAnswerShown(6);
     }
 
     @Test
     public void question8Test(){
         HomePageModel homePageModel = new HomePageModel(driver);
-        homePageModel.clickQuestion8();
-        homePageModel.waitForAnswer8Shown();
+        homePageModel.clickQuestion(7);
+        homePageModel.waitForAnswerShown(7);
     }
 
     @After
