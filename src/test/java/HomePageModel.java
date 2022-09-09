@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -31,10 +32,13 @@ public class HomePageModel {
         question.click();
     }
 
-    public void waitForAnswerShown(int number){
+    public void waitForAnswerShown(int number, String expectedText){
         By answerLocator = By.id("accordion__panel-" + number);
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.visibilityOfElementLocated(answerLocator));
+        WebElement answer = driver.findElement(answerLocator);
+        String text = answer.getText();
+        Assert.assertEquals(text, expectedText);
     }
 
     public void clickOrderButton(boolean bottomButton){
